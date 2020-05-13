@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./tarea-factura.css">
+    <title>Tarea - Factura</title>
+</head>
+
+<body class="body">
+    <main class="main">
+        <section class="section__encabezado">
+            <section class="section__1">
+                <div>
+                    <label class="label" for="inputNombre">Razón Social : </label>
+                    <input type="text" class="contenido" id="inputNombre" />
+                </div>
+                <div>
+                    <label class="label" for="inputRuc">RUC : </label>
+                    <input type="text" class="contenido" id="inputRuc" />
+                </div>
+            </section>
+            <section class="section__2">
+                <div>
+                    <label class="label" for="inputFecha">Fecha : </label>
+                    <input type="date" class="contenido" id="inputFecha" />
+                </div>
+                <div>
+                    <label class="label" for="inputNro">Nro : </label>
+                    <input type="text" class="contenido" id="inputNro" />
+                </div>
+            </section>
+        </section>
+        <section class="section__agregar__articulo">
+            <div class="main__agregar">
+                <div>
+                    <label class="label2" for="inputCantidad">Cantidad</label>
+                    <input type="number" class="main__input__number contenido" id="inputCantidad" />
+                </div>
+                <div>
+                    <label class="label2" for="inputDescripcion">Descripción</label>
+                    <input type="text" class="main__input contenido" id="inputDescripcion" />
+                </div>
+                <div>
+                    <label class="label2" for="inputPUnit">P.Unitario</label>
+                    <input type="number" class="main__input__number contenido" id="inputPUnit" value="0.00" />
+                </div>
+                <div>
+                    <label class="label2" for="inputPTotal">P.Total</label>
+                    <input type="number" class="main__input__number contenido" id="inputPTotal" value="0.00" disabled/>
+                </div>
+                <button class="main__guardar" id="btnGuardar"><i class="far fa-save"></i></button>            
+            </div>
+        </section>
+
+        <section class="section__listado">
+            <h2 class="main__titulo">Lista de Artículos</h2>
+            <table class="tabla">
+                <thead class="tabla__thead">
+                    <tr>
+                        <th>Cant.</th>
+                        <th>Descripción</th>
+                        <th>P. Unit.</th>
+                        <th>P. Total</th>
+                    </tr>
+                </thead>
+                <tbody class="tabla__body" id="tabla__body">
+                    <!-- 
+                    <tr class="tabla_tr">
+                        <td class="td__cantidad"></td>
+                        <td class="td__descripcion"></td>
+                        <td class="td__punitario"></td>
+                        <td class="td__ptotal"></td>
+                    </tr>
+                    -->
+                </tbody>
+                
+            </table>
+        </section>
+
+        <section class="section__guardar">
+            <button class="main__guardar" id="btnGuardarTodo">Guardar<i class="far fa-save"></i></button>            
+            <div>
+                <label class="label2" for="inputTotal2">TOTAL</label>
+                <input type="number" class="main__input__number contenido tabla__total" id="inputTotal2" value="0.00" disabled/>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <script src="./tarea-factura.js"></script>
+</body>
+
+</html>
